@@ -11,4 +11,3 @@ jobs:
    steps:
       - publish: artifact2
         artifact: artifact2
-
