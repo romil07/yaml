@@ -2,5 +2,5 @@ jobs:
  - job: Job1
    pool: default
    steps:
-      - publish: artifact1
+      - publish: artifact1.artifact
         artifact: artifact1
