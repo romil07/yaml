@@ -3,6 +3,12 @@ resources:
    - pipeline: P1
      source: romil07.yaml
      project: pr
+ packages:
+   - package: somePackage
+     type: Nuget
+     connection: gh
+     package: NewtonSoft.json
+     version: 11.0.3
      
 stages:
  - stage: ConsumeArtifact
