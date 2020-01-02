@@ -7,7 +7,7 @@ resources:
    - package: somePackage
      type: Nuget
      connection: gh
-     package: NewtonSoft.json
+     name: NewtonSoft.json
      version: 11.0.3
      
 stages:
