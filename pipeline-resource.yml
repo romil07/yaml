@@ -13,15 +13,6 @@ resources:
 stages:
  - stage: ConsumeArtifact
    jobs:
-     - deployment: deployJob
-       environment: envionment2
-       pool: Default
-       strategy:
-        runOnce:
-          deploy:
-            steps:
-              - powershell: |
-                 ls $(Build.ArtifactStagingDirectory)/
      - job: job1
        pool: 
         name: Default
