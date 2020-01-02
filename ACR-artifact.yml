@@ -1,0 +1,44 @@
+resources:
+  containers:
+  # - container: ACRResourceLatest
+  #   type: ACR
+  #   azureSubscription: ARM_Manual
+  #   resourceGroup: RMDev
+  #   registry: asmittaacr
+  #   repository: iashishmittal/docker-acr
+  # - container: ACRResourceLatest
+  #   type: ACR
+  #   resourceGroup: RMDev
+  #   azureSubscription: ARM_Connection:31ad5ccae63ae276641df14298dea6b55bb711e3
+  #   registry: anshenormdev
+  #   repository: testimage:56
+  - container: ACRResourceLatest
+    type: ACR
+    azureSubscription: ARM_Manual
+    resourceGroup: anumitaReg
+    registry: abhisheaAcr
+    repository: acr_container_repo1
+  # - container: DockerHubContainer
+  #   endpoint: DockerHubConnection
+  #   image: amjadocker/DockerContainerRepo11
+
+stages:
+  - stage: stage1
+    jobs:
+    - job: download_specific_artifact1
+      displayName: download specific artifact1
+      pool:
+        name: Default
+      steps:
+        - task: PowerShell@2
+          inputs:
+            targetType: 'inline'
+            script: |
+              Write-Host $(resources.container.ACRResourceLatest.type)
+              
+              Write-Host $(resources.container.ACRResourceLatest.tag)
+              Write-Host $(resources.container.ACRResourceLatest.digest)
+            
+              Write-Host $(resources.container.ACRResourceLatest.repository)
+            # Write-Host $(resources.container.ACRResourceLatest.registry)
+            # Write-Host $(resources.container.ACRResourceLatest.location)
