@@ -4,10 +4,3 @@ jobs:
    steps:
       - publish: artifact1
         artifact: artifact1
-        
- - job: J2
-   pool:
-    name: default
-   steps:
-      - publish: artifact2
-        artifact: artifact2
