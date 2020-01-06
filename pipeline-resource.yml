@@ -3,6 +3,9 @@ resources:
    - pipeline: P1
      source: romil07.yaml
      project: pr
+   - pipeline: P2
+     source: romil07.yaml
+     project: pr
  packages:
    - package: somePackage
      type: Nuget
@@ -21,3 +24,5 @@ stages:
                  ls $(Build.ArtifactStagingDirectory)/
         - download: P1
           artifact: artifact1
+        - download: P2
+          artifact: artifact2
