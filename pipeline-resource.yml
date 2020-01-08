@@ -1,5 +1,5 @@
 resources:
- packages:
+  packages:
    - package: somePackage
      type: Nuget
      connection: gh
