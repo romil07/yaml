@@ -1,11 +1,4 @@
 resources:
- pipelines:
-  #  - pipeline: P1
-  #    source: romil07.yaml
-  #    project: pr
-  #  - pipeline: P2
-  #    source: romil07.yaml
-  #    project: pr
  packages:
    - package: somePackage
      type: Nuget
