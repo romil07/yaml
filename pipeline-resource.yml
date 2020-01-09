@@ -15,7 +15,4 @@ stages:
        steps:
         - powershell: |
                  ls $(Build.ArtifactStagingDirectory)/
-        - download: P1
-          artifact: artifact1
-        - download: P2
-          artifact: artifact2
+        - getPackage: somePackage
