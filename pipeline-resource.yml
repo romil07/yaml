@@ -13,6 +13,4 @@ stages:
        pool: 
         name: Default
        steps:
-        - powershell: |
-                 ls $(Build.ArtifactStagingDirectory)/
         - getPackage: somePackage
