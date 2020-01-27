@@ -2,7 +2,7 @@ resources:
   packages:
    - package: somePackage
      type: Nuget
-     connection: gh
+     connection: gh-rg
      name: NewtonSoft.json
      version: 11.0.3
      
