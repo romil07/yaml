@@ -2,7 +2,7 @@ resources:
   packages:
    - package: somePackage
      type: Nuget
-     connection: 47702cb3-8472-4050-81fd-20cefba91d60
+     connection: gh-rg
      name: OctocatApp
      version: 2.1.1
      
