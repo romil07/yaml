@@ -2,9 +2,9 @@ resources:
   packages:
    - package: somePackage
      type: Nuget
-     connection: gh-rg
-     name: NewtonSoft.json
-     version: 11.0.3
+     connection: 47702cb3-8472-4050-81fd-20cefba91d60
+     name: OctocatApp
+     version: 2.1.1
      
 stages:
  - stage: ConsumeArtifact
