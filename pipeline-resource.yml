@@ -4,6 +4,7 @@ resources:
      type: Nuget
      connection: gh-rg
      name: OctocatApp
+     version: 2.1.1
      
 stages:
  - stage: ConsumeArtifact
