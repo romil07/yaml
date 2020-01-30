@@ -3,7 +3,7 @@ resources:
    - package: somePackage
      type: Nuget
      connection: gh-rg
-     name: OctocatApp
+     name: romil07/OctocatApp
      version: 2.1.1
      
 stages:
