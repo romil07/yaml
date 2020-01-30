@@ -3,8 +3,8 @@ resources:
    - package: somePackage
      type: Nuget
      connection: gh-rg
-     name: OctocatApp
-     version: 1.0.0
+     name: romil07/OctocatApp
+     version: 2.1.1
      
 stages:
  - stage: ConsumeArtifact
