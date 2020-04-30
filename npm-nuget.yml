@@ -1,0 +1,33 @@
+trigger: none
+ 
+resources:
+  packages:
+   - package: npmpackage
+     type: Npm
+     connection: gh-rg
+     name: nugetTest/nodeapp
+     trigger: true
+
+   - package: nugetPackage
+     type: Nuget
+     connection: gh-rg
+     name: nugetTest/OctocatApp
+     trigger: true
+     
+stages:
+- stage: Production
+  displayName: Production 
+  jobs: 
+  - deployment: Deployment
+    displayName: Deploy
+    pool: 
+      name: default
+    environment: ashkirEnv
+    strategy:
+      runOnce:
+        deploy:
+          steps: 
+          - getPackage: npmpackage
+          - getPackage: nugetPackage
+          - script: echo Hello, world!
+            displayName: 'Run a one-line script'
