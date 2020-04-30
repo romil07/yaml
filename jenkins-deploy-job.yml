@@ -16,7 +16,7 @@ stages:
   - deployment: Deployment
     displayName: Deploy
     pool: 
-      name: default
+      name: rogoyal
     environment: ashkirEnv
     strategy:
       runOnce:
