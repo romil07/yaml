@@ -1,0 +1,27 @@
+trigger: none
+ 
+resources:
+  builds:
+   - build: jenkinsJob
+     type: jenkins
+     connection: jenkins-working
+     source: rogoyal
+    #  version: 2.1.10
+    #  trigger: true
+
+stages:
+- stage: Production
+  displayName: Production 
+  jobs: 
+  - deployment: Deployment
+    displayName: Deploy
+    pool: 
+      name: default
+    environment: ashkirEnv
+    strategy:
+      runOnce:
+        deploy:
+          steps: 
+          - downloadBuild: jenkinsJob
+          - script: echo Hello, world!
+            displayName: 'Run a one-line script'
