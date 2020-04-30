@@ -1,0 +1,27 @@
+trigger: none
+ 
+resources:
+  packages:
+   - package: somePackage
+     type: Nuget
+     connection: gh-rg
+     name: nugetTest/OctocatApp
+     version: 2.1.10
+    #  trigger: true
+
+stages:
+- stage: Production
+  displayName: Production 
+  jobs: 
+  - deployment: Deployment
+    displayName: Deploy
+    pool: 
+      name: default
+    environment: ashkirEnv
+    strategy:
+      runOnce:
+        deploy:
+          steps: 
+          - getPackage: somePackage
+          - script: echo Hello, world!
+            displayName: 'Run a one-line script'
