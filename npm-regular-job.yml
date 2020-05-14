@@ -6,7 +6,7 @@ resources:
      type: Npm
      connection: gh-rg
      name: nugetTest/nodeapp
-     version: 1.0.0
+     version: 1.0.9
      trigger: true
      
 stages:
