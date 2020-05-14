@@ -1,0 +1,17 @@
+trigger: none
+
+resources:         
+  repositories:
+  - repository: repo
+    type: github
+    endpoint: romil07
+    name: romil07/yaml
+
+stages:
+ - stage: ConsumeArtifact
+   jobs:
+     - job: job1
+       pool: 
+        name: Default
+       steps:
+        - checkout: repo
