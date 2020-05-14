@@ -3,7 +3,7 @@ trigger: none
 resources:
   packages:
    - package: nodePackage
-     type: Nuget
+     type: Npm
      connection: gh-rg
      name: nugetTest/nodeapp
      version: 1.0.0
