@@ -12,6 +12,6 @@ stages:
    jobs:
      - job: job1
        pool: 
-        name: Default
+        name: hosted
        steps:
         - checkout: repo
