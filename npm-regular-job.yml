@@ -1,0 +1,19 @@
+trigger: none
+ 
+resources:
+  packages:
+   - package: nodePackage
+     type: Nuget
+     connection: gh-rg
+     name: nugetTest/nodeapp
+     version: 1.0.0
+     trigger: true
+     
+stages:
+ - stage: ConsumeArtifact
+   jobs:
+     - job: job1
+       pool: 
+        name: Default
+       steps:
+        - getPackage: nodePackage
