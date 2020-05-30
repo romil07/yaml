@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Hello world action step
       id: hello
-      uses: actions/githubactions@v1
+      uses: harshiniks/githubactions@v1
       with:
         who-to-greet: 'Harshini'
     # Use the output from the `hello` step
