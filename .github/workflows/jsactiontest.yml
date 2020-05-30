@@ -18,7 +18,7 @@ jobs:
       id: hello
       uses: harshiniks/githubJsactions@v1
       with:
-        who-to-greet: 'Mona the Octocat'
+        who-to-greet: 'Harshini'
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
