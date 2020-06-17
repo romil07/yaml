@@ -9,8 +9,7 @@ trigger:
       ['t1']
   }
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: default
 
 steps:
 - script: echo Hello, world!
